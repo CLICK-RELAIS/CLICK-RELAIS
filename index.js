@@ -63,7 +63,7 @@ const communesParWilaya = {
   
   const codeHTMLParCommune = {
     'CHETTIA': '<iframe src="https://my.atlist.com/map/fdfbc17c-25c4-48ff-a997-9a4aa0078796?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" border-radius: "30px" scrolling="no" allowfullscreen></iframe>',
-    'BOU ISMAÏL':'<iframe src="https://my.atlist.com/map/e2bca319-8d67-4c9d-aacf-9e563a557832?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" border-radius: "30px" scrolling="no" allowfullscreen></iframe>'
+    'BOU ISMAÏL':'<iframe src="https://my.atlist.com/map/e2bca319-8d67-4c9d-aacf-9e563a557832?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" border-radius: "30px" scrolling="no" allowfullscreen></iframe>',
     'KOLÉA' : '<iframe src="https://my.atlist.com/map/df757e02-91ea-4d79-b438-94281a4f95f1?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" scrolling="no" allowfullscreen></iframe>',
 
     'ADRAR' : '<h3>Cette commune ne dispose pas de point de relais</h3>',
