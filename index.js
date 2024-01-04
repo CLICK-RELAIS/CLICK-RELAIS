@@ -1,4 +1,4 @@
-// Exemple de données fictives. Remplacez-les par de vraies données.
+
 const communesParWilaya = {
     select: [''],
     wilaya1: ['ADRAR', 'TAMEST', 'CHAROUINE', 'REGGANE', 'INZGHMIR', 'TIT', 'KSAR KADDOUR', 'TSABIT', 'TIMIMOUN', 'OULED SAÏD', 'ZAOUET KOUNTA', 'AOULEF', 'TAMOKTEN', 'TAMANTIT', 'FENOUGHIL', 'TINERKOUK', 'DELDOUL', 'SALI', 'AKABLI', 'METARFA', 'OULED AHMED TAMMI', 'BOUDA', 'AOUGROUT', 'TALMINE', 'BORDJ BADJI MOKHTAR', 'SEBAA', 'OULED AISSA', 'TIMIAOUINE'],
@@ -64,7 +64,10 @@ const communesParWilaya = {
   const codeHTMLParCommune = {
     'CHETTIA': '<iframe src="https://my.atlist.com/map/fdfbc17c-25c4-48ff-a997-9a4aa0078796?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" border-radius: "30px" scrolling="no" allowfullscreen></iframe>',
     'BOU ISMAÏL':'<iframe src="https://my.atlist.com/map/e2bca319-8d67-4c9d-aacf-9e563a557832?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" border-radius: "30px" scrolling="no" allowfullscreen></iframe>'
-    // Ajoutez les autres communes et leur code HTML correspondant ici
+    'KOLÉA' : '<iframe src="https://my.atlist.com/map/df757e02-91ea-4d79-b438-94281a4f95f1?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" scrolling="no" allowfullscreen></iframe>',
+
+    'ADRAR' : '<h3>Cette commune ne dispose pas de point de relais</h3>',
+      
   };
 
 
@@ -73,13 +76,13 @@ const communesParWilaya = {
     const communeSelect = document.getElementById('commune');
     const wilayaValue = wilayaSelect.value;
   
-    // Effacez les anciennes options de la liste des communes
+    
     communeSelect.innerHTML = '';
   
-    // Chargez les nouvelles communes en fonction de la wilaya sélectionnée
+    
     const communes = communesParWilaya[wilayaValue];
   
-    // Ajoutez les nouvelles options à la liste des communes
+    
     if (communes) {
       communes.forEach(commune => {
         const option = document.createElement('option');
@@ -90,7 +93,7 @@ const communesParWilaya = {
     }
   }
   
-  // Chargez les communes pour la première fois au chargement de la page
+  
   chargerCommunes();
 
  
@@ -112,13 +115,3 @@ const communesParWilaya = {
 
 
 
-//  let map = document.getElementById("map");
-//  let btn = document.getElementById("btn");
-//  let txt = document.getElementById("txt");
-//  let commune = document.getElementById("commune"); 
-//  btn.onclick = function(){
-//     if (commune.value === "ABOU EL HASSAN") {
-//     txt.innerHTML = "hello";
-//     }else{    txt.innerHTML = "NO hello"
-//     } 
-//   }
