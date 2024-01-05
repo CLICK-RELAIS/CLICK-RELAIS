@@ -9,14 +9,19 @@
 <body>
   <nav>
 		<a href="productPage.html" class="logo">RELIPARC.DZ</a>
-		<ul >
+		<ul id="actions" >
 			<li><a href="">Accueil</a></li>
 			<li><a href="">A propos</a></li>
 			<li><a href="">Contact</a></li>
 			
 		</ul>
-		
-		
+    <button id="menu">
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+		<a id="test" href="productPage.html" class="logo">RELIPARC.DZ</a>
 	</nav>
   <div class="titre">
     <h1>Livraison aux points de relais:</h1>
@@ -27,23 +32,22 @@
     <br>
     <br>
    
-    <label for="nom">Nom :</label>
-    <input type="text" placeholder="Entrer votre nom">
+    <label  for="nom">Nom :</label>
+    <input id="nom" type="text" placeholder="Entrer votre nom">
     <label for="Prénom">Prénom :</label>
-    <input type="text" placeholder="Entrer votre prénom">
+    <input id="prénom" type="text" placeholder="Entrer votre prénom">
     <label for="Numéro">Numéro de téléphone :</label>
-    <input type="tel" placeholder="Entrer votre numéro">
+    <input id="tel" type="tel" placeholder="Entrer votre numéro">
 
 
   
   
-
   <h3>Les informations sur la livraison: </h3>
   <br>
   <br>
     <label for="wilaya">Choisir une wilaya :</label>
   <select id="wilaya" onchange="chargerCommunes()">
-    <option value="select">- Choisir une wilaya -</option>
+    <option value="wilaya0">- Choisir une wilaya -</option>
     <option value="wilaya1">01-ADRAR</option>
     <option value="wilaya2">02-CHLEF</option>
     <option value="wilaya3">03-LAGHOUAT </option>
@@ -108,9 +112,8 @@
 
   <label for="commune">Choisir une commune :</label>
   <select id="commune">
-   
+    
   </select>
-
  <button id="afficherIframeBtn">Trouver</button>
  </div>
   
@@ -119,7 +122,7 @@
  <br>
 
   <div class="map" id="iframeContainer">
-	   <h3>sélectionner une commune pour trouver les points de relais</h3>
+    <h3>sélectionner une commune pour trouver les points de relais</h3>
   </div>
   <section class="contact" id="contact">
 		<div class="main-contact">
@@ -130,15 +133,12 @@
 			    <li><a href="#contact">Contact</a></li>
 			</div>
 
-			<div class="contact-content">
-				<li><a href="#contact">Contact</a></li>
-				<li><a href="#">Tel: 00-342-800-00</a></li>
-			</div>
+		
 
 			<div class="contact-content">
 				<li><a href="https://web.facebook.com/Fiat">Facebook</a></li>
 				<li><a href="https://twitter.com/fiat">Tweeter</a></li>
-		
+		    <li><a href="#">Tel: 00-800-342-800-00</a></li>
 			</div>
 
 		</div>
