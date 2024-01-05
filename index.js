@@ -1,6 +1,6 @@
-
 const communesParWilaya = {
     select: [''],
+    wilaya0: ['- Choisir une commune -'],
     wilaya1: ['ADRAR', 'TAMEST', 'CHAROUINE', 'REGGANE', 'INZGHMIR', 'TIT', 'KSAR KADDOUR', 'TSABIT', 'TIMIMOUN', 'OULED SAÏD', 'ZAOUET KOUNTA', 'AOULEF', 'TAMOKTEN', 'TAMANTIT', 'FENOUGHIL', 'TINERKOUK', 'DELDOUL', 'SALI', 'AKABLI', 'METARFA', 'OULED AHMED TAMMI', 'BOUDA', 'AOUGROUT', 'TALMINE', 'BORDJ BADJI MOKHTAR', 'SEBAA', 'OULED AISSA', 'TIMIAOUINE'],
     wilaya2: ['ABOU EL HASSAN', 'AÏN MERANE', 'BÉNAIRIA', 'BENI BOUATEB', 'BENI HAOUA', 'BENI RACHED', 'BOUKADIR', 'BOUZEGHAIA', 'BREIRA', 'CHETTIA', 'CHLEF', 'DAHRA', 'EL HADJADJ', 'EL KARIMIA', 'EL MARSA', 'HARCHOUN', 'HARENFA', 'LABIOD MEDJADJA', 'MOUSSADEK', 'OUED FODDA', 'OUED GOUSSINE', 'OUED SLY', 'OULED ABBES', 'OULED BEN ABDELKADER', 'OULED FARES', 'OUM DROU', 'SENDJAS', 'SIDI ABDERRAHMANE', 'SIDI AKKACHA', 'SOBHA', 'TADJENA', 'TALASSA', 'TAOUGRITE', 'TÉNÈS', 'ZEBOUDJA'],
     wilaya3: ['AFLOU', 'AÏN MADHI', 'AÏN SIDI ALI', 'BEIDHA', 'BENNASSER BENCHOHRA', 'BRIDA', 'EL ASSAFIA', 'EL GHICHA', 'EL HOUAITA', 'GUELTAT SIDI SAAD', 'HADJ MECHRI', 'HASSI DELAA', 'HASSI R’MEL', 'KHENEG', 'KSAR EL HIRANE', 'LAGHOUAT', 'OUED M’ZI', 'OUED MORRA', 'SEBGAG', 'SIDI BOUZID', 'SIDI MAKHLOUF', 'TADJEMOUT', 'TADJROUNA', 'TAOUIALA'],
@@ -67,7 +67,6 @@ const communesParWilaya = {
     'KOLÉA' : '<iframe src="https://my.atlist.com/map/df757e02-91ea-4d79-b438-94281a4f95f1?share=true" allow="geolocation \'self\' https://my.atlist.com" width="100%" height="800px" loading="lazy" frameborder="0" scrolling="no" allowfullscreen></iframe>',
 
     'ADRAR' : '<h3>Cette commune ne dispose pas de point de relais</h3>',
-      
   };
 
 
@@ -76,13 +75,10 @@ const communesParWilaya = {
     const communeSelect = document.getElementById('commune');
     const wilayaValue = wilayaSelect.value;
   
-    
     communeSelect.innerHTML = '';
   
-    
     const communes = communesParWilaya[wilayaValue];
   
-    
     if (communes) {
       communes.forEach(commune => {
         const option = document.createElement('option');
@@ -93,7 +89,6 @@ const communesParWilaya = {
     }
   }
   
-  
   chargerCommunes();
 
  
@@ -102,7 +97,6 @@ const communesParWilaya = {
     const communeValue = communeSelect.value;
   
     if (codeHTMLParCommune.hasOwnProperty(communeValue)) {
-      // Créer l'élément iframe
       const iframeContainer = document.getElementById('iframeContainer');
       iframeContainer.innerHTML = codeHTMLParCommune[communeValue];
     } else {
@@ -115,3 +109,18 @@ const communesParWilaya = {
 
 
 
+
+
+const menu = document.getElementById("menu");
+const actions = document.getElementById("actions");
+const test = document.getElementById("test");
+menu.addEventListener("click",()=>{
+    hundleMenu();
+
+})
+
+function hundleMenu(){
+menu.classList.toggle("is-active");
+actions.classList.toggle("is-active");
+test.classList.toggle("is-active");
+}
