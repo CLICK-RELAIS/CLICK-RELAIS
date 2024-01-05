@@ -33,7 +33,6 @@ nav{
     height: 62px;
     background-color: white;
     border-bottom: 1px solid rgb(152,20,76); 
-    /* border-bottom: 1px solid rgb(175, 112, 17);  */
     z-index: 100;
 }
 .logo{
@@ -76,7 +75,6 @@ nav ul li a:hover{
     width: 93%;
     height: 330px;
     background-color:white;
-    /* text-align: center; */
     justify-content: space-around;
     border-radius: 30px;
     
@@ -96,7 +94,6 @@ nav ul li a:hover{
 }
 .form input{
     margin-bottom: 10px;
-    /* font-size: 16px;  */
     width: 15%;
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid rgb(152,20,76) ;
@@ -148,22 +145,26 @@ nav ul li a:hover{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     border: solid 3px rgb(152,20,76) ;
 }
 .contact{
-    height: 300px;
+    height: 350px;
     margin-top: 40px;
 	padding: 80px 17%;
 	background: rgb(152,20,76) ;
 }
 .main-contact{
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-	gap: 2rem;
+	display: flex;
+	
 	margin-bottom: 3rem;
+    text-align: center;
 }
 .contact-content li{
 	margin-bottom: 15px;
+}
+.contact-content{
+    width: 50%;
 }
 .contact-content li a{
 	display: block;
@@ -201,4 +202,141 @@ nav ul li a:hover{
 	font-size: 16px;
 	font-weight: 600;
 	cursor: pointer;
+}
+
+
+
+
+
+
+#menu{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#test{
+    display: none;
+    position: relative;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    user-select: none;
+}
+#menu span{
+    display: block;
+    width: 30px ;
+    height: 3px;
+    background-color: rgb(152,20,76);
+    border-radius: 6px;
+    transform-origin: 0 0;
+    transition: 0.4s;
+    margin-bottom: 4px;
+}
+#menu.is-active span:nth-child(1){
+  transform: translate(0px, -2px) rotate(45deg);
+}
+#menu.is-active span:nth-child(2){
+    opacity: 0;
+    transform: translateX(15px);
+}
+#menu.is-active span:nth-child(3){
+    transform: translate(-3px,3px)rotate(-45deg);
+}
+#menu.is-active span{
+    background-color: rgb(152,20,76);
+}
+
+
+
+
+
+
+
+
+@media screen and ( max-width: 800px) {
+    :root{
+        --padding: 1.5rem;
+    }
+    html{
+        font-size: 16px;
+    }
+    
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 82px;
+        background-color: rgb(255, 255, 255);
+        border-bottom: 1px solid rgb(152,20,76);
+        z-index: 100;
+        
+    }
+    
+
+    nav > a {
+        display: none;
+    }
+    
+    nav ul {
+        padding-top: 100px;
+        display: none;
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(188, 188, 188);
+        top: 0;
+        left: 0;
+
+    }
+    nav ul.is-active{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        margin: 50px;
+    }
+    #menu{
+        display: block;
+    }
+    #test{
+        margin-right: 30%;
+        display: block;
+    }
+    .form{
+        display: block;
+    }
+    .form input{
+        
+        width: 90%;
+       
+    }
+    
+    .form label{
+        display: none;
+    }
+    .form select{
+        
+        width: 90%;
+        margin-bottom: 15px;
+    }
+    .form{
+       
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        height: 500px;
+    }
+    .form h3{
+        margin-left: 0;
+    }
 }
