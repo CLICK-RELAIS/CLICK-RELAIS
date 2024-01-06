@@ -151,12 +151,12 @@ nav ul li a:hover{
 .contact{
     height: 350px;
     margin-top: 40px;
-	padding: 80px 17%;
+	padding-top: 80px;
 	background: rgb(152,20,76) ;
 }
 .main-contact{
 	display: flex;
-	
+	width: 100%;
 	margin-bottom: 3rem;
     text-align: center;
 }
@@ -338,5 +338,18 @@ nav ul li a:hover{
     }
     .form h3{
         margin-left: 0;
+    }
+    .action form input[type="email"]{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        max-width: 100%;
+        padding: 12px 15px;
+        background: #c3c3c3;
+        color: var(--bg-color);
+        border: none;
+        outline: none;
+        font-size: 16px;
+        font-weight: 600;
     }
 }
